@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import json
 import os
-import time
 
 from mcp.server.mcpserver import MCPServer
 
@@ -40,7 +39,7 @@ class PinduoduoMCP(CommerceMCPBase):
                     "logo": "https://img.pinduoduo.com/mock_logo.jpg",
                     "merchant_type": 1,
                     "status": 1,
-                    "category": "女士精品服装 / 衬衣"
+                    "category": "女士精品服装 / 衬衣",
                 }
             }
 
@@ -58,7 +57,7 @@ class PinduoduoMCP(CommerceMCPBase):
                             "order_status": 1,  # 1: 待发货
                             "order_status_str": "待发货",
                             "created_at": "2026-09-11 10:15:00",
-                            "buyer_memo": "麻烦尽快发货，着急穿！"
+                            "buyer_memo": "麻烦尽快发货，着急穿！",
                         },
                         {
                             "order_sn": "PDD20260910002",
@@ -68,7 +67,7 @@ class PinduoduoMCP(CommerceMCPBase):
                             "order_status": 2,  # 2: 已发货
                             "order_status_str": "已发货",
                             "created_at": "2026-09-10 14:30:00",
-                            "buyer_memo": ""
+                            "buyer_memo": "",
                         },
                         {
                             "order_sn": "PDD20260909003",
@@ -78,9 +77,9 @@ class PinduoduoMCP(CommerceMCPBase):
                             "order_status": 3,  # 3: 已签收
                             "order_status_str": "已签收",
                             "created_at": "2026-09-09 09:20:00",
-                            "buyer_memo": "请发顺丰"
-                        }
-                    ]
+                            "buyer_memo": "请发顺丰",
+                        },
+                    ],
                 }
             }
 
@@ -99,7 +98,7 @@ class PinduoduoMCP(CommerceMCPBase):
                         "receiver_name": "张女士",
                         "receiver_phone": "138****8888",
                         "receiver_address": "浙江省杭州市西湖区**路88号",
-                        "created_at": "2026-09-11 10:15:00"
+                        "created_at": "2026-09-11 10:15:00",
                     }
                 }
             }
@@ -116,7 +115,7 @@ class PinduoduoMCP(CommerceMCPBase):
                             "price": 199.00,
                             "sold_quantity": 320,
                             "goods_quantity": 500,
-                            "is_onsale": 1
+                            "is_onsale": 1,
                         },
                         {
                             "goods_id": "1002",
@@ -124,7 +123,7 @@ class PinduoduoMCP(CommerceMCPBase):
                             "price": 128.00,
                             "sold_quantity": 580,
                             "goods_quantity": 200,
-                            "is_onsale": 1
+                            "is_onsale": 1,
                         },
                         {
                             "goods_id": "1003",
@@ -132,9 +131,9 @@ class PinduoduoMCP(CommerceMCPBase):
                             "price": 258.00,
                             "sold_quantity": 150,
                             "goods_quantity": 100,
-                            "is_onsale": 1
-                        }
-                    ]
+                            "is_onsale": 1,
+                        },
+                    ],
                 }
             }
 
@@ -149,16 +148,16 @@ class PinduoduoMCP(CommerceMCPBase):
                             "name": "m***8",
                             "comment": "衣服收到太惊喜了！衬衣面料很有质感，穿上特别显瘦显气质，非常满意！",
                             "score": 5,
-                            "time": "2026-09-10"
+                            "time": "2026-09-10",
                         },
                         {
                             "comment_id": "C002",
                             "name": "y***6",
                             "comment": "版型很好看，上身高级，洗了也没有缩水变质，推荐购买。",
                             "score": 5,
-                            "time": "2026-09-09"
-                        }
-                    ]
+                            "time": "2026-09-09",
+                        },
+                    ],
                 }
             }
 
@@ -174,10 +173,10 @@ class PinduoduoMCP(CommerceMCPBase):
                             "goods_name": "韩版垂感显瘦百搭职业女士衬衣",
                             "refund_amount": 128.00,
                             "after_sales_type": 1,  # 仅退款
-                            "refund_status": 1,     # 审核中
-                            "reason": "拍错尺码/颜色"
+                            "refund_status": 1,  # 审核中
+                            "reason": "拍错尺码/颜色",
                         }
-                    ]
+                    ],
                 }
             }
 
@@ -190,18 +189,13 @@ class PinduoduoMCP(CommerceMCPBase):
                     "status": "已揽收",
                     "traces": [
                         {"time": "2026-09-10 16:00:00", "status": "商家已发货"},
-                        {"time": "2026-09-10 18:30:00", "status": "顺丰速运 已收取快件"}
-                    ]
+                        {"time": "2026-09-10 18:30:00", "status": "顺丰速运 已收取快件"},
+                    ],
                 }
             }
 
         # 兜底默认 Mock
-        return {
-            "result": "success",
-            "mock": True,
-            "api_type": api_type,
-            "biz_params": biz_params
-        }
+        return {"result": "success", "mock": True, "api_type": api_type, "biz_params": biz_params}
 
 
 # ── Instantiate client from env (Mock safely) ─────────────────────────────
